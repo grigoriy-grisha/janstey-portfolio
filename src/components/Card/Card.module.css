@@ -44,6 +44,13 @@
   bottom: 28px;
 }
 
+@media screen and (max-width: 768px) {
+  .img {
+    width: 100%;
+    bottom: -30px;
+  }
+}
+
 @media screen and (max-width: 552px) {
   .container {
     max-height: 486px;
@@ -55,8 +62,3 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .img {
-    width: 100%;
-  }
-}
