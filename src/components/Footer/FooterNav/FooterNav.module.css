@@ -1,0 +1,38 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 85px;
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    gap: 52px;
+  }
+}
+
+.infoMobile {
+  display: flex;
+  justify-content: center;
+}
+
+.navContainerMobile {
+  display: flex;
+  justify-content: center;
+}
+
+.navMobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+}

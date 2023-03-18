@@ -1,0 +1,29 @@
+.wrapper {
+  display: inline-flex;
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 500px;
+  padding: 4px;
+  gap: 1px;
+}
+
+.button {
+  transition: 1000ms;
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 36px;
+  cursor: pointer;
+}
+
+.leftButton {
+  border-radius: 500px 0 0 500px;
+}
+
+.rightButton {
+  border-radius: 0 500px 500px 0;
+}
+
+.button:hover {
+  background: var(--white);
+  color: var(--black);
+}

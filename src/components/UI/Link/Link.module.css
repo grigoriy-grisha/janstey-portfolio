@@ -1,0 +1,29 @@
+.link {
+    text-decoration: none;
+    color: var(--gray);
+    position: relative;
+    transition: 800ms;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.link::after {
+    position: absolute;
+    background: var(--black);
+    transition: 300ms;
+    content: "";
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.link:hover {
+    color: var(--black);
+}
+
+.link:hover::after {
+    width: 100%;
+    opacity: 1;
+}

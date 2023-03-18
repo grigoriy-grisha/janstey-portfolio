@@ -1,0 +1,143 @@
+.button {
+  border-radius: 76px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 12px;
+  cursor: pointer;
+  gap: 4px;
+  transition: 500ms;
+  max-height: 44px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.light {
+  background: var(--white);
+}
+
+.hover-light,
+.light:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.light-bordered {
+  background: var(--white);
+  border: 1px solid var(--black);
+}
+
+.hover-light-bordered,
+.light-bordered:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.dark {
+  color: var(--white);
+  background: var(--black);
+}
+
+.hover-dark,
+.dark:hover {
+  color: var(--black);
+  background: white;
+}
+
+.dark-bordered {
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--white);
+}
+
+.hover-dark-bordered,
+.dark-bordered:hover {
+  color: var(--black);
+  background: white;
+  border: 1px solid var(--black);
+}
+
+.transparent {
+  border: 1px solid var(--black);
+  background: transparent;
+}
+
+.hover-transparent,
+.transparent:hover {
+  color: var(--white);
+  background: var(--black);
+}
+
+.icon {
+  display: flex;
+  transition: 600ms;
+}
+
+.icon-light {
+  stroke: var(--black);
+  fill: var(--black);
+}
+
+.hover-light .icon-light,
+.button:hover .icon-light {
+  stroke: var(--white);
+  fill: var(--white);
+}
+
+.icon-light-bordered {
+  stroke: var(--black);
+  fill: var(--black);
+}
+
+.hover-dark .icon-light-bordered,
+.button:hover .icon-light-bordered {
+  stroke: var(--white);
+  fill: var(--white);
+}
+
+.icon-dark {
+  stroke: var(--white);
+  fill: var(--white);
+}
+
+.hover-dark .icon-dark,
+.button:hover .icon-dark {
+  stroke: var(--black);
+  fill: var(--black);
+}
+
+.icon-dark-bordered {
+  stroke: var(--white);
+  fill: var(--white);
+}
+
+.hover-dark .icon-dark-bordered,
+.button:hover .icon-dark-bordered {
+  stroke: var(--black);
+  fill: var(--black);
+}
+
+.icon-transparent {
+  stroke: var(--black);
+  fill: var(--black);
+}
+
+.hover-transparent .icon-transparent,
+.button:hover .icon-transparent {
+  stroke: var(--white);
+  fill: var(--white);
+}
+
+.button:hover .rotatedIcon,
+.hover-light .rotatedIcon,
+.hover-dark .rotatedIcon,
+.hover-transparent .rotatedIcon,
+.hover-dark-bordered .rotatedIcon,
+.hover-light-bordered .rotatedIcon{
+  transform: rotate(45deg);
+}
+
+.fullWidth {
+  width: 100%;
+}

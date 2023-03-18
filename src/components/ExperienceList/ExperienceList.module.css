@@ -1,0 +1,31 @@
+.experienceList {
+  display: grid;
+  padding: 30px;
+  border-radius: 30px;
+  gap: 16px;
+  background: var(--black);
+}
+
+.threeColumns {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.twoColumn {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.oneColumn {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .experienceList {
+    padding: 20px;
+  }
+}

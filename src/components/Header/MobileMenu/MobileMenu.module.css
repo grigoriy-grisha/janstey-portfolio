@@ -1,0 +1,16 @@
+.menuContainer {
+  position: relative;
+  height: 100vh;
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.translate {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%);
+}

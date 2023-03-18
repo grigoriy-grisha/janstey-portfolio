@@ -1,0 +1,62 @@
+.container {
+  overflow: hidden;
+  box-sizing: border-box;
+
+  padding: 36px 30px 28px;
+  position: relative;
+
+  border-radius: 36px;
+
+  cursor: pointer;
+
+  max-height: 600px;
+  height: 600px;
+}
+
+
+
+.containerText {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  transition: 500ms ease-out;
+}
+
+.container:hover .img {
+  transform: scale(1.1);
+}
+
+.text {
+  margin-top: 14px;
+  white-space: pre-wrap;
+}
+
+.button {
+  position: absolute;
+  left: 30px;
+  bottom: 28px;
+}
+
+@media screen and (max-width: 552px) {
+  .container {
+    max-height: 486px;
+    height: 486px;
+  }
+
+  .text {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img {
+    width: 100%;
+  }
+}

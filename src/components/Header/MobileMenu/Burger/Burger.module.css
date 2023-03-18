@@ -1,0 +1,22 @@
+.line {
+  transition: 400ms transform, 800ms opacity;
+}
+
+.active .middle {
+  opacity: 0;
+}
+
+.top,
+.bottom {
+  position: relative;
+}
+
+.active .top {
+  transform: translateY(7px);
+  opacity: 0;
+}
+
+.active .bottom {
+  transform: translateY(-6.5px);
+  opacity: 0;
+}

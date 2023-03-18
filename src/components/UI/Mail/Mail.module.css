@@ -1,0 +1,23 @@
+.mail {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.mail::after {
+  position: absolute;
+  background: var(--black);
+  transition: 300ms;
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: -5px;
+  left: 0;
+}
+
+.mail:hover::after {
+  width: 100%;
+}
