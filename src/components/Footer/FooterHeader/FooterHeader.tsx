@@ -8,7 +8,9 @@ import { IconPlus } from "@/components/UI/Icons/IconPlus";
 import { IconLogoSmall } from "@/components/UI/Icons/IconLogoSmall";
 
 import classes from "./FooterHeader.module.css";
+import { useTranslation } from "next-i18next";
 function FooterHeader() {
+  const { t } = useTranslation("common");
   return (
     <Media
       desktopContent={
@@ -20,9 +22,11 @@ function FooterHeader() {
             <IconLogo />
           </Link>
           <div className={classes.buttons}>
-            <Button type={ButtonTypes.LightBordered}>ABOUT ME</Button>
+            <Link href="/about">
+              <Button type={ButtonTypes.LightBordered}>{t("about")}</Button>
+            </Link>
             <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
-              CONTACT A CUSTOMER
+              {t("contact_customer")}
             </Button>
           </div>
         </div>

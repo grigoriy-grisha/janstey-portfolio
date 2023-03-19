@@ -1,7 +1,6 @@
 import { memo } from "react";
 
-import useMediaQuery from "@/hooks/useMedia";
-import { theme } from "@/utils/theme";
+import { Media } from "@/components/UI/Media";
 
 interface IProps {
   heightDesktop?: string | number;
@@ -21,32 +20,29 @@ function Spacer({
   heightMobile,
   widthMobile,
 }: IProps) {
-  const isTablet = useMediaQuery(theme.breakpointQueries.tablet);
-  const isMobile = useMediaQuery(theme.breakpointQueries.mobile);
-
-  if (isTablet) {
-    return (
-      <div
-        style={{
-          height: heightTablet || heightDesktop,
-          width: widthTablet || widthDesktop,
-        }}
-      ></div>
-    );
-  }
-
-  if (isMobile) {
-    return (
-      <div
-        style={{
-          height: heightMobile || heightTablet || heightDesktop,
-          width: widthMobile || widthTablet || widthDesktop,
-        }}
-      ></div>
-    );
-  }
-
-  return <div style={{ height: heightDesktop, width: widthDesktop }}></div>;
+  return (
+    <Media
+      desktopContent={
+        <div style={{ height: heightDesktop, width: widthDesktop }}></div>
+      }
+      tabletContent={
+        <div
+          style={{
+            height: heightTablet || heightDesktop,
+            width: widthTablet || widthDesktop,
+          }}
+        ></div>
+      }
+      mobileContent={
+        <div
+          style={{
+            height: heightMobile || heightTablet || heightDesktop,
+            width: widthMobile || widthTablet || widthDesktop,
+          }}
+        ></div>
+      }
+    />
+  );
 }
 
 export default memo(Spacer);

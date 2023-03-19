@@ -11,9 +11,16 @@
 
   max-height: 600px;
   height: 600px;
+
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(50px);
 }
 
-
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .containerText {
   position: relative;
@@ -25,8 +32,20 @@
 .img {
   position: absolute;
   right: 0;
-  bottom: -20px;
   transition: 500ms ease-out;
+  bottom: -20px;
+}
+
+.largeImg {
+  display: block;
+}
+
+.smallImg {
+  display: none;
+}
+
+.imgContainer.img {
+  height: auto !important;
 }
 
 .container:hover .img {
@@ -46,19 +65,30 @@
 
 @media screen and (max-width: 768px) {
   .img {
-    width: 100%;
-    bottom: -30px;
+    bottom: -60px;
   }
 }
 
 @media screen and (max-width: 552px) {
+  .largeImg {
+    display: none;
+  }
+
+  .smallImg {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img {
+    width: 100%;
+    bottom: -20px;
+  }
   .container {
     max-height: 486px;
     height: 486px;
   }
-
   .text {
     margin-top: 10px;
   }
 }
-

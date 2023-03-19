@@ -1,20 +1,39 @@
 import { ReactNode } from "react";
-import useMediaQuery from "@/hooks/useMedia";
-import { theme } from "@/utils/theme";
+import classnames from "classnames";
+
+import classes from "./Media.module.css";
 
 interface IProps {
   desktopContent: ReactNode;
   tabletContent?: ReactNode;
   mobileContent?: ReactNode;
 }
-function Media({ desktopContent, tabletContent, mobileContent }: IProps) {
-  const isMobile = useMediaQuery(theme.breakpointQueries.mobile);
-  const isTablet = useMediaQuery(theme.breakpointQueries.tablet);
 
-  console.log(isMobile, "isMobile");
-  if (isMobile) return <>{mobileContent || tabletContent || desktopContent}</>;
-  if (isTablet) return <>{tabletContent || desktopContent}</>;
-  return <>{desktopContent}</>;
+function getMobile({ desktopContent, tabletContent, mobileContent }: IProps) {
+  if (mobileContent !== undefined) return mobileContent;
+  if (tabletContent !== undefined) return tabletContent;
+  return desktopContent;
+}
+
+function getTablet({ desktopContent, tabletContent }: IProps) {
+  if (tabletContent !== undefined) return tabletContent;
+  return desktopContent;
+}
+
+function Media({ desktopContent, tabletContent, mobileContent }: IProps) {
+  return (
+    <div>
+      <div className={classnames(classes.block, classes.showMobile)}>
+        {getMobile({ desktopContent, tabletContent, mobileContent })}
+      </div>
+      <div className={classnames(classes.block, classes.showTablet)}>
+        {getTablet({ desktopContent, tabletContent })}
+      </div>
+      <div className={classnames(classes.block, classes.showDesktop)}>
+        {desktopContent}
+      </div>
+    </div>
+  );
 }
 
 export default Media;

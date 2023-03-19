@@ -2,7 +2,13 @@
   box-sizing: border-box;
   background: var(--white);
   border-radius: 20px;
-  padding: 24px 16px 24px 24px;
+  padding: 22px 8px 22px 22px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.activeAnimate {
+  opacity: 1;
 }
 
 .containerWithButton {

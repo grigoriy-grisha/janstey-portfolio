@@ -1,9 +1,12 @@
 import { Typography, TypographyTypes } from "@/components/UI/Typography";
+import { useTranslation } from "next-i18next";
 
 function MainText() {
+  const { t } = useTranslation("common");
+
   return (
     <Typography uppercase type={TypographyTypes.H1}>
-      Designer, in the sphere of UX/UI design, MOTION & WEB
+      {t("mainText")}
     </Typography>
   );
 }

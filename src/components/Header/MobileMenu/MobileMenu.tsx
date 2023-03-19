@@ -1,4 +1,7 @@
+import React, { memo, useEffect, useState } from "react";
 import classnames from "classnames";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 import { IconLogoSmall } from "@/components/UI/Icons/IconLogoSmall";
 import { PageContainer } from "@/components/PageContainer";
@@ -8,16 +11,18 @@ import { Button, ButtonTypes } from "@/components/UI/Button";
 import { IconPlus } from "@/components/UI/Icons/IconPlus";
 import { Typography, TypographyTypes } from "@/components/UI/Typography";
 import { theme } from "@/utils/theme";
+import useChangeToLocate from "@/hooks/useChangeToLocate";
 
 import classes from "./MobileMenu.module.css";
 import classesHeader from "../Header.module.css";
 
 import { Burger } from "./Burger";
-import React, { memo, useEffect, useState } from "react";
-import Link from "next/link";
 
 const paddings = { paddingTop: 12, paddingBottom: 12 };
 function MobileMenu() {
+  const { changeTo, currentRoute } = useChangeToLocate();
+  const { t } = useTranslation("common");
+
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -47,30 +52,34 @@ function MobileMenu() {
             </div>
             <Spacer heightDesktop="44px" />
             <div className={classes.buttons}>
-              <Button type={ButtonTypes.DarkBordered} fullWidth>
-                ABOUT ME
-              </Button>
+              <Link href="/about" onClick={() => setIsActive(false)}>
+                <Button fullWidth type={ButtonTypes.DarkBordered}>
+                  {t("about")}
+                </Button>
+              </Link>
               <Button
                 type={ButtonTypes.Light}
                 leftIcon={<IconPlus />}
                 fullWidth
               >
-                CONTACT A CUSTOMER
+                {t("contact_customer")}
               </Button>
               <Button type={ButtonTypes.Light} fullWidth>
-                BEHANCE
+                {t("behance")}
               </Button>
               <Button type={ButtonTypes.Light} fullWidth>
-                TELEGRAM
+                {t("telegram")}
               </Button>
             </div>
-            <Typography
-              className={classes.translate}
-              color={theme.colors.white}
-              type={TypographyTypes.TEXT_REGULAR_3}
-            >
-              На русский
-            </Typography>
+            <Link href={currentRoute} locale={changeTo}>
+              <Typography
+                className={classes.translate}
+                color={theme.colors.white}
+                type={TypographyTypes.TEXT_REGULAR_3}
+              >
+                {t("translate")}
+              </Typography>
+            </Link>
           </PageContainer>
         </div>
       </div>

@@ -19,7 +19,7 @@ class Theme {
   };
 
   breakpointQueries = {
-    desktop: `(min-width: ${this.breakpoints.desktop})`,
+    desktop: `(min-width: ${this.breakpoints.tablet})`,
     tablet: `(min-width: ${this.breakpoints.mobile}) and (max-width: ${this.breakpoints.tablet})`,
     tabletAndMobile: `(min-width: ${this.breakpoints.min}) and (max-width: ${this.breakpoints.tablet})`,
     mobile: `(min-width: ${this.breakpoints.min}) and (max-width: ${this.breakpoints.mobile})`,

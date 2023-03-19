@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Card } from "@/components/Card";
 import Moonbirds from "@/images/backgrounds/Moonbirds.png";
 import MeBeats from "@/images/backgrounds/MeBeats.png";
@@ -7,7 +9,6 @@ import MoonbirdsMobile from "@/images/backgrounds/MoonbirdsMobile.png";
 import MeBeatsMobile from "@/images/backgrounds/MeBeatsMobile.png";
 import StormexMobile from "@/images/backgrounds/StormexMobile.png";
 import RokiMobile from "@/images/backgrounds/RokiMobile.png";
-
 import { theme } from "@/utils/theme";
 
 import classes from "./PortfolioCards.module.css";
@@ -36,6 +37,7 @@ function PortfolioCards() {
         textMain={"Cryptocurrency\nExchanger,\nLanding page"}
         textName="Stormex"
       />
+
       <Card
         background={theme.colors.orangeBackground}
         lightColor

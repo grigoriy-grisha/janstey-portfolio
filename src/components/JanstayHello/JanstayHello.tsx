@@ -4,15 +4,18 @@ import ava from "@/images/icons/ava.png";
 
 import classes from "./JanstayHello.module.css";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 function JanstayHello() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={classes.container}>
       <Typography color={theme.colors.gray} type={TypographyTypes.TEXT_1}>
-        Hey, I’m
+        {t("jansteyHello")}
       </Typography>
-      <Image className={classes.img} src={ava} alt="janstay" />
+      <Image className={classes.img} src={ava} alt="janstay-ava" />
       <Typography color={theme.colors.gray} type={TypographyTypes.TEXT_1}>
-        janstay
+        {t("jansteyName")}
       </Typography>
     </div>
   );

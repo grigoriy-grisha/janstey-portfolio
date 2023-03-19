@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 import { PageContainer } from "@/components/PageContainer";
 import { Header } from "@/components/Header";
@@ -13,22 +16,21 @@ import { Spacer } from "@/components/UI/Spacer";
 import avaLarge from "src/images/icons/avaLarge.png";
 
 export default function About() {
+  const { t } = useTranslation("common");
+
   return (
     <PageContainer>
       <Header />
       <Spacer heightDesktop="84px" />
       <Media
-        desktopContent={<Image src={avaLarge} alt="janstey" />}
+        desktopContent={<Image src={avaLarge} alt="janstey-ava" />}
         mobileContent={
-          <Image src={avaLarge} width={136} height={136} alt="janstey" />
+          <Image src={avaLarge} width={136} height={136} alt="janstey-ava" />
         }
-      ></Media>
+      />
 
       <Spacer heightDesktop="44px" />
-      <Typography type={TypographyTypes.TEXT_R_1}>
-        Hi, I'm Vladimir, I've been working in design for over 3 years, now I'm
-        actively developing as a UX/UI designer
-      </Typography>
+      <Typography type={TypographyTypes.TEXT_R_1}>{t("aboutHello")}</Typography>
       <Spacer heightDesktop="120px" />
       <ExperienceList />
       <Footer />
@@ -36,3 +38,9 @@ export default function About() {
     </PageContainer>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+  },
+});

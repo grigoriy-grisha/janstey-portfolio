@@ -5,8 +5,14 @@ import { Typography, TypographyTypes } from "@/components/UI/Typography";
 import { theme } from "@/utils/theme";
 
 import classes from "./CopyRightFooter.module.css";
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import useChangeToLocate from "@/hooks/useChangeToLocate";
 
 function CopyRightFooter() {
+  const { t } = useTranslation("common");
+  const { changeTo, currentRoute } = useChangeToLocate();
+
   return (
     <Media
       desktopContent={
@@ -17,9 +23,11 @@ function CopyRightFooter() {
           >
             ©2023 Janstay. All copyrights reserved.
           </Typography>
-          <Typography type={TypographyTypes.TEXT_REGULAR_3}>
-            На русский
-          </Typography>
+          <Link href={currentRoute} locale={changeTo}>
+            <Typography type={TypographyTypes.TEXT_REGULAR_3}>
+              {t("translate")}
+            </Typography>
+          </Link>
         </div>
       }
       mobileContent={

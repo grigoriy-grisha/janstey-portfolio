@@ -11,6 +11,7 @@
   max-height: 44px;
   text-transform: uppercase;
   border: none;
+  white-space: nowrap
 }
 
 .light {

@@ -1,21 +1,21 @@
 import { memo } from "react";
 import classes from "./FloatingSocialLink.module.css";
 import { SocialLink } from "../../components/UI/SocialLink";
-import useMediaQuery from "../../hooks/useMedia";
-import { theme } from "../../utils/theme";
+import { Media } from "@/components/UI/Media";
 
 interface IProps {
   bottom: number | string;
 }
 function FloatingSocialLink({ bottom }: IProps) {
-  const isTablet = useMediaQuery(theme.breakpointQueries.tabletAndMobile);
-
-  if (isTablet) return null;
-
   return (
-    <div style={{ bottom }} className={classes.floating}>
-      <SocialLink leftText="BEHANCE" rightText="TELEGRAM" />
-    </div>
+    <Media
+      desktopContent={
+        <div style={{ bottom }} className={classes.floating}>
+          <SocialLink leftText="BEHANCE" rightText="TELEGRAM" />
+        </div>
+      }
+      mobileContent={null}
+    ></Media>
   );
 }
 

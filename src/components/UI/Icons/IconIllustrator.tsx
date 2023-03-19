@@ -7,7 +7,7 @@ export function IconIllustrator() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_140_1274)">
+      <g clipPath="url(#clip0_140_1274)">
         <circle cx="32" cy="32" r="31.5" stroke="black" />
         <path
           d="M15.2583 43.4812H20.3643L22.0315 38.5489H31.4793L33.1812 43.4812H38.2872L29.1173 18.8197H24.3934L15.2583 43.4812ZM23.4209 34.3807L26.7207 24.7246H26.7901L30.0899 34.3807H23.4209Z"

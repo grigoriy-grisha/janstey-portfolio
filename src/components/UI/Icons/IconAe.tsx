@@ -7,7 +7,7 @@ export function IconAe() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_140_1371)">
+      <g clipPath="url(#clip0_140_1371)">
         <circle cx="32" cy="32" r="31.5" stroke="black" />
         <path
           d="M12 43.4338H17.0589L18.7107 38.547H28.0713L29.7576 43.4338H34.8165L25.7312 19H21.0509L12 43.4338ZM20.0873 34.4174L23.3566 24.8503H23.4254L26.6948 34.4174H20.0873Z"

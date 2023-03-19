@@ -7,7 +7,7 @@ export function IconFour() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_136_1090)">
+      <g clipPath="url(#clip0_136_1090)">
         <circle cx="32" cy="32" r="31.5" stroke="black" />
         <path
           d="M32.9937 45.6177H38.3806V41.0751H42.079V36.4118H38.3806V18H33.9987L21.3356 37.6178V41.0751H32.9937V45.6177ZM27.2853 36.653L33.3555 26.8441V36.653H27.2853Z"

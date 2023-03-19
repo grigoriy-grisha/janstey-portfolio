@@ -29,23 +29,23 @@ import { IconDribble } from "@/components/UI/Icons/IconDribble";
 import { IconLinkedin } from "@/components/UI/Icons/IconLinkedin";
 import { IconYoutube } from "@/components/UI/Icons/IconYoutube";
 import { IconResume } from "@/components/UI/Icons/IconResume";
-import useMediaQuery from "@/hooks/useMedia";
-import { theme } from "@/utils/theme";
 
 import classes from "./ExperienceList.module.css";
 import classnames from "classnames";
+import { useTranslation } from "next-i18next";
 
 function ExperienceList() {
-  const isTablet = useMediaQuery(theme.breakpointQueries.tablet);
-  const isMobile = useMediaQuery(theme.breakpointQueries.mobile);
+  const { t } = useTranslation("common");
 
   return (
     <div>
       <div
-        className={classnames(classes.experienceList, classes.threeColumns, {
-          [classes.twoColumn]: isTablet,
-          [classes.oneColumn]: isMobile,
-        })}
+        className={classnames(
+          classes.experienceList,
+          classes.threeColumns,
+          classes.twoColumnTablet,
+          classes.oneColumnMobile
+        )}
       >
         <ExperienceItem
           withButton
@@ -79,50 +79,54 @@ function ExperienceList() {
         />
       </div>
       <Spacer heightDesktop="120px" />
-      <Paragraph
-        title="My experience"
-        text="I'm only 19 years old, but I already have more than 3 years of experience in design.
-All this time I've been working as a freelancer, looking for clients on many sites and encountering different areas in design, and the clients themselves were people from different countries (Europe/CIS)"
-      />
+      <Paragraph title={t("myExperienceTitle")} text={t("myExperienceText")} />
       <Spacer heightDesktop="120px" />
       <Paragraph
-        title="Design process"
-        text="Every project has a different path to achieve its goals, but it usually looks like this"
+        title={t("designProcessTitle")}
+        text={t("designProcessText")}
       />
       <Spacer heightDesktop="60px" />
       <div className={classes.experienceList}>
         <div>
-          <ExperienceItem iconContent={<IconZero />} title="Task statement" />
+          <ExperienceItem
+            iconContent={<IconZero />}
+            title={t("designProcessZero")}
+          />
         </div>
 
         <div
-          className={classnames(classes.twoColumn, {
-            [classes.oneColumn]: isTablet || isMobile,
-          })}
+          className={classnames(
+            classes.twoColumn,
+            classes.oneColumnMobileAndTablet
+          )}
         >
           <ExperienceItem
             iconContent={<IconOne />}
-            title="Determining time and cost"
+            title={t("designProcessOne")}
           />
-          <ExperienceItem iconContent={<IconTwo />} title="Work process" />
+          <ExperienceItem
+            iconContent={<IconTwo />}
+            title={t("designProcessTwo")}
+          />
           <ExperienceItem
             iconContent={<IconThree />}
-            title="Presentation of the result"
+            title={t("designProcessThree")}
           />
-          <ExperienceItem iconContent={<IconFour />} title="File Transfer" />
+          <ExperienceItem
+            iconContent={<IconFour />}
+            title={t("designProcessFour")}
+          />
         </div>
       </div>
       <Spacer heightDesktop="120px" />
-      <Paragraph
-        title="My skills"
-        text="Let me tell you what I work with and in what programs"
-      />
+      <Paragraph title={t("mySkillsTitle")} text={t("mySkillsText")} />
       <Spacer heightDesktop="60px" />
       <div className={classes.experienceList}>
         <div
-          className={classnames(classes.threeColumns, {
-            [classes.oneColumn]: isTablet || isMobile,
-          })}
+          className={classnames(
+            classes.threeColumns,
+            classes.oneColumnMobileAndTablet
+          )}
         >
           <ExperienceItem iconContent={<IconFigma />} title="Figma" />
           <ExperienceItem
@@ -142,9 +146,10 @@ All this time I've been working as a freelancer, looking for clients on many sit
         </div>
 
         <div
-          className={classnames(classes.twoColumn, {
-            [classes.oneColumn]: isTablet || isMobile,
-          })}
+          className={classnames(
+            classes.twoColumn,
+            classes.oneColumnMobileAndTablet
+          )}
         >
           <ExperienceItem
             iconContent={<IconInfoArh />}
@@ -156,9 +161,10 @@ All this time I've been working as a freelancer, looking for clients on many sit
           />
         </div>
         <div
-          className={classnames(classes.threeColumns, {
-            [classes.oneColumn]: isTablet || isMobile,
-          })}
+          className={classnames(
+            classes.threeColumns,
+            classes.oneColumnMobileAndTablet
+          )}
         >
           <ExperienceItem iconContent={<Icon3D />} title="Blender, Cinema4D" />
           <ExperienceItem iconContent={<IconWireframe />} title="Wireframes" />
@@ -172,16 +178,14 @@ All this time I've been working as a freelancer, looking for clients on many sit
         </div>
       </div>
       <Spacer heightDesktop="120px" />
-      <Paragraph
-        title="My hobbies"
-        text="In my free time I like listening to music, play guitar, even composed a few songs myself, started drawing, not very professional yet, but everything is ahead. During the breaks I watch soap operas and movies."
-      />
+      <Paragraph title={t("myHobbiesTitle")} text={t("myHobbiesText")} />
       <Spacer heightDesktop="120px" />
       <div className={classes.experienceList}>
         <ExperienceItem
+          wrapTittleInMobile
           withButton
           iconContent={<IconResume />}
-          title="My resume"
+          title={t("myResume")}
         />
       </div>
       <Spacer heightDesktop="240px" heightMobile="160px" />

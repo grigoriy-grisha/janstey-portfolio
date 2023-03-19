@@ -1,7 +1,7 @@
 import classes from "./Button.module.css";
 import classnames from "classnames";
 import { Typography, TypographyTypes } from "../Typography";
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
 export enum ButtonTypes {
   Dark = "dark",
@@ -12,7 +12,9 @@ export enum ButtonTypes {
   Transparent = "transparent",
 }
 
-interface IProps {
+type ButtonAttributes = HTMLAttributes<"button">;
+
+interface IProps extends ButtonAttributes {
   children: string;
   type: ButtonTypes;
   leftIcon?: ReactNode;

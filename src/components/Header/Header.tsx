@@ -1,3 +1,7 @@
+import React from "react";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+
 import { IconLogo } from "@/components/UI/Icons/IconLogo";
 import { IconPlus } from "@/components/UI/Icons/IconPlus";
 import { Button, ButtonTypes } from "@/components/UI/Button";
@@ -5,10 +9,10 @@ import { Media } from "@/components/UI/Media";
 
 import classes from "./Header.module.css";
 import { MobileMenu } from "./MobileMenu";
-import React from "react";
-import Link from "next/link";
 
 function Header() {
+  const { t } = useTranslation("common");
+
   return (
     <Media
       desktopContent={
@@ -21,10 +25,10 @@ function Header() {
           </Link>
           <div className={classes.buttons}>
             <Link href="/about">
-              <Button type={ButtonTypes.LightBordered}>ABOUT ME</Button>
+              <Button type={ButtonTypes.LightBordered}>{t("about")}</Button>
             </Link>
             <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
-              CONTACT A CUSTOMER
+              {t("contact_customer")}
             </Button>
           </div>
         </div>

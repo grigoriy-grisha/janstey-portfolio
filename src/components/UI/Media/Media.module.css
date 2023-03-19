@@ -1,0 +1,21 @@
+.block {
+  display: none;
+}
+
+@media screen and (min-width: 993px) {
+  .showDesktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .showTablet {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .showMobile {
+    display: block;
+  }
+}

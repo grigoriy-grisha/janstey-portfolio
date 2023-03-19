@@ -24,8 +24,30 @@
   grid-template-columns: 1fr;
 }
 
+@media screen and (max-width: 992px) {
+  .oneColumnMobileAndTablet {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  .twoColumnTablet {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .experienceList {
     padding: 20px;
+  }
+
+  .oneColumnMobile {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
   }
 }

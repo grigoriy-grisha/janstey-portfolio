@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 
 import { PageContainer } from "@/components/PageContainer";
 import { Header } from "@/components/Header";
@@ -10,6 +9,8 @@ import { MainText } from "@/components/MainText";
 import { PortfolioCards } from "@/components/PortfolioCards";
 import { Footer } from "@/components/Footer";
 import { FloatingSocialLink } from "@/components/FloatingSocialLink";
+import { GetServerSideProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {
   return (
@@ -35,3 +36,9 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+  },
+});
