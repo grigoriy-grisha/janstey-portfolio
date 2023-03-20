@@ -22,7 +22,7 @@ export const useIntersect = (oneTimes?: boolean) => {
       isWasIntersectingRef.current = entry.isIntersecting;
       setWasInteresting(entry.isIntersecting);
     });
-  }, []);
+  }, [oneTimes]);
 
   useEffect(() => {
     if (oneTimes && isWasIntersecting) {

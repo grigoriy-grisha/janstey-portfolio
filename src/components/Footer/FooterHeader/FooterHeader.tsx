@@ -33,7 +33,9 @@ function FooterHeader() {
       }
       mobileContent={
         <div className={classes.mobile}>
-          <IconLogoSmall />
+          <Link href="/">
+            <IconLogoSmall />
+          </Link>
         </div>
       }
     ></Media>
