@@ -11,11 +11,16 @@ function FloatingSocialLink({ bottom }: IProps) {
     <Media
       desktopContent={
         <div style={{ bottom }} className={classes.floating}>
-          <SocialLink leftText="BEHANCE" rightText="TELEGRAM" />
+          <SocialLink
+            leftHref="https://www.behance.net/mqux"
+            leftText="BEHANCE"
+            rightHref="https://t.me/mqdzn"
+            rightText="TELEGRAM"
+          />
         </div>
       }
       mobileContent={null}
-    ></Media>
+    />
   );
 }
 

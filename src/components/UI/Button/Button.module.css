@@ -1,4 +1,5 @@
 .button {
+  box-sizing: border-box;
   border-radius: 76px;
   display: flex;
   flex-direction: row;
@@ -16,17 +17,21 @@
 
 .light {
   background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
 }
 
 .hover-light,
 .light:hover {
   background: var(--black);
   color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .light-bordered {
   background: var(--white);
   border: 1px solid var(--black);
+  color: var(--black);
 }
 
 .hover-light-bordered,
@@ -38,12 +43,14 @@
 .dark {
   color: var(--white);
   background: var(--black);
+  border: 1px solid var(--black);
 }
 
 .hover-dark,
 .dark:hover {
   color: var(--black);
   background: white;
+  border: 1px solid var(--black);
 }
 
 .dark-bordered {

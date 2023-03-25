@@ -38,7 +38,7 @@ function FooterHeader() {
           </Link>
         </div>
       }
-    ></Media>
+    />
   );
 }
 

@@ -34,7 +34,7 @@ function Header() {
         </div>
       }
       mobileContent={<MobileMenu />}
-    ></Media>
+    />
   );
 }
 

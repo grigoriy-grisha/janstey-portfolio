@@ -70,6 +70,15 @@
 }
 
 @media screen and (max-width: 552px) {
+  .container {
+    max-height: 700px;
+    height: 700px;
+  }
+
+  .img {
+    bottom: -60px;
+  }
+
   .largeImg {
     display: none;
   }
@@ -79,16 +88,32 @@
   }
 }
 
+@media screen and (max-width: 452px) {
+  .container {
+    max-height: 600px;
+    height: 600px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .img {
     width: 100%;
-    bottom: -20px;
+    bottom: -60px;
   }
   .container {
-    max-height: 486px;
-    height: 486px;
+    max-height: 550px;
+    height: 550px;
   }
   .text {
     margin-top: 10px;
   }
 }
+
+
+@media screen and (max-width: 350px) {
+  .container {
+    max-height: 468px;
+    height: 468px;
+  }
+}
+

@@ -9,6 +9,10 @@
     --orange-backgorund: rgb(255, 103, 0);
 }
 
+.body {
+    overflow: hidden;
+}
+
 #root {
     overflow-x: hidden;
 }

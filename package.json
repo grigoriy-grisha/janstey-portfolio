@@ -18,9 +18,13 @@
     "i18next": "^22.4.12",
     "next": "13.2.4",
     "next-i18next": "^13.2.2",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.2.0",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
   }
 }
