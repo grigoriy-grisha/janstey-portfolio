@@ -64,12 +64,16 @@ function MobileMenu() {
               >
                 {t("contact_customer")}
               </Button>
-              <Button type={ButtonTypes.Light} fullWidth>
-                {t("behance")}
-              </Button>
-              <Button type={ButtonTypes.Light} fullWidth>
-                {t("telegram")}
-              </Button>
+              <Link href="https://www.behance.net/mqux" target="_blank">
+                <Button type={ButtonTypes.Light} fullWidth>
+                  Behance
+                </Button>
+              </Link>
+              <Link href="https://t.me/mkuzhen" target="_blank">
+                <Button type={ButtonTypes.Light} fullWidth>
+                  Telegram
+                </Button>
+              </Link>
             </div>
             <Link href={currentRoute} locale={changeTo}>
               <Typography

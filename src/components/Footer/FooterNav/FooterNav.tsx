@@ -16,15 +16,17 @@ function FooterNav() {
           <div className={classes.navContainer}>
             <div>
               <div className={classes.nav}>
-                <Link href="#">Behance</Link>
-                <Link href="#">Telegram</Link>
-                <Link href="#">Linkedin</Link>
+                <Link href="https://www.behance.net/mqux">Behance</Link>
+                <Link href="https://t.me/mkuzhen">Telegram</Link>
+                <Link href="https://www.linkedin.com/in/janstay-designer-a45259268/">
+                  Linkedin
+                </Link>
               </div>
               <Spacer heightDesktop="40px" />
               <div className={classes.nav}>
-                <Link href="#">Dribbble</Link>
-                <Link href="#">Dprofile</Link>
-                <Link href="#">Resume</Link>
+                <Link href="https://www.dribbble.com/janstay">Dribbble</Link>
+                <Link href="https://www.dprofile.ru/janstay">Dprofile</Link>
+                {/*<Link href="https://www.behance.net/mqux">Resume</Link>*/}
               </div>
             </div>
             <Spacer widthDesktop="70px" widthTablet="40px" />
@@ -38,15 +40,17 @@ function FooterNav() {
           <div className={classes.navContainerMobile}>
             <div>
               <div className={classes.navMobile}>
-                <Link href="#">Behance</Link>
-                <Link href="#">Telegram</Link>
-                <Link href="#">Linkedin</Link>
+                <Link href="https://www.behance.net/mqux">Behance</Link>
+                <Link href="https://t.me/mkuzhen">Telegram</Link>
+                <Link href="https://www.linkedin.com/in/janstay-designer-a45259268/">
+                  Linkedin
+                </Link>
               </div>
               <Spacer heightDesktop="40px" />
               <div className={classes.navMobile}>
-                <Link href="#">Dribbble</Link>
-                <Link href="#">Dprofile</Link>
-                <Link href="#">Resume</Link>
+                <Link href="https://www.dribbble.com/janstay">Dribbble</Link>
+                <Link href="https://www.dprofile.ru/janstay">Dprofile</Link>
+                {/*<Link href="#">Resume</Link>*/}
               </div>
             </div>
           </div>

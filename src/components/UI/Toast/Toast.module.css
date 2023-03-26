@@ -1,0 +1,16 @@
+.toast {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px 30px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 36px;
+    transition: 500ms ease-out;
+    text-align: center;
+}
+
+.active {
+    top: 20px;
+}

@@ -12,6 +12,7 @@ import { ExperienceList } from "@/components/ExperienceList";
 import { Footer } from "@/components/Footer";
 import { FloatingSocialLink } from "@/components/FloatingSocialLink";
 import { Spacer } from "@/components/UI/Spacer";
+import { HeadApp } from "@/components/HeadApp";
 
 import avaLarge from "src/images/icons/avaLarge.png";
 
@@ -19,23 +20,28 @@ export default function About() {
   const { t } = useTranslation("common");
 
   return (
-    <PageContainer>
-      <Header />
-      <Spacer heightDesktop="84px" />
-      <Media
-        desktopContent={<Image src={avaLarge} alt="janstey-ava" />}
-        mobileContent={
-          <Image src={avaLarge} width={136} height={136} alt="janstey-ava" />
-        }
-      />
+    <>
+      <HeadApp />
+      <PageContainer>
+        <Header />
+        <Spacer heightDesktop="84px" />
+        <Media
+          desktopContent={<Image src={avaLarge} alt="janstey-ava" />}
+          mobileContent={
+            <Image src={avaLarge} width={136} height={136} alt="janstey-ava" />
+          }
+        />
 
-      <Spacer heightDesktop="44px" />
-      <Typography type={TypographyTypes.TEXT_R_1}>{t("aboutHello")}</Typography>
-      <Spacer heightDesktop="120px" />
-      <ExperienceList />
-      <Footer />
-      <FloatingSocialLink bottom="26px" />
-    </PageContainer>
+        <Spacer heightDesktop="44px" />
+        <Typography type={TypographyTypes.TEXT_R_1}>
+          {t("aboutHello")}
+        </Typography>
+        <Spacer heightDesktop="120px" />
+        <ExperienceList />
+        <Footer />
+        <FloatingSocialLink bottom="26px" />
+      </PageContainer>
+    </>
   );
 }
 

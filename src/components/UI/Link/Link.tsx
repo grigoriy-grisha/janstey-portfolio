@@ -9,7 +9,7 @@ interface IProps {
 function Link({ children, href }: IProps) {
   return (
     <Typography type={TypographyTypes.TEXT_3}>
-      <a href={href} className={classes.link}>
+      <a href={href} target="_blank" className={classes.link}>
         {children}
       </a>
     </Typography>

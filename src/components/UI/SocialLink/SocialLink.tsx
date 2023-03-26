@@ -16,13 +16,17 @@ function SocialLink({ leftText, leftHref, rightText, rightHref }: IProps) {
         className={classnames(classes.leftButton, classes.button)}
         type={TypographyTypes.SOCIAL_BUTTON_1}
       >
-        <a href={leftHref}>{leftText}</a>
+        <a href={leftHref} target="_blank">
+          {leftText}
+        </a>
       </Typography>
       <Typography
         className={classnames(classes.rightButton, classes.button)}
         type={TypographyTypes.SOCIAL_BUTTON_1}
       >
-        <a href={rightHref}>{rightText}</a>
+        <a href={rightHref} target="_blank">
+          {rightText}
+        </a>
       </Typography>
     </div>
   );

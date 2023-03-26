@@ -1,5 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+
 import { theme, ThemeColorValues } from "@/utils/theme";
 import { Hover } from "@/components/UI/Hover";
 import { Typography, TypographyTypes } from "@/components/UI/Typography";
@@ -11,6 +13,7 @@ import classes from "./Card.module.css";
 import classnames from "classnames";
 
 interface IProps {
+  href: string;
   textName: string;
   textMain: string;
   imageUrl: string | StaticImageData;
@@ -19,6 +22,7 @@ interface IProps {
   lightColor?: boolean;
 }
 function Card({
+  href,
   textName,
   textMain,
   imageUrl,
@@ -33,49 +37,51 @@ function Card({
       {(entry, isWasInteresting) => (
         <Hover>
           {(isHover) => (
-            <div
-              className={classnames(classes.container, {
-                [classes.visible]: isWasInteresting,
-              })}
-              style={{ backgroundColor: background }}
-            >
-              <div className={classes.containerText}>
-                <Typography type={TypographyTypes.TEXT_2} color={color}>
-                  {textName}
-                </Typography>
-                <Typography
-                  className={classes.text}
-                  type={TypographyTypes.H3}
-                  color={color}
-                >
-                  {textMain}
-                </Typography>
-              </div>
-              <div className={classes.imgContainer}>
-                <Image
-                  style={{ height: "auto", width: "100%" }}
-                  className={classnames(classes.img, classes.largeImg)}
-                  src={imageUrl}
-                  alt="janstay"
-                />
-                <Image
-                  style={{ height: "auto", width: "100%" }}
-                  className={classnames(classes.img, classes.smallImg)}
-                  src={mobileImageUrl}
-                  alt="janstay"
-                />
-              </div>
-
-              <Button
-                rotateRightButton
-                activeForceHover={isHover}
-                className={classes.button}
-                type={ButtonTypes.Light}
-                rightIcon={<IconArrowRotated />}
+            <Link href={href} target="_blank">
+              <div
+                className={classnames(classes.container, {
+                  [classes.visible]: isWasInteresting,
+                })}
+                style={{ backgroundColor: background }}
               >
-                OPEN CASE
-              </Button>
-            </div>
+                <div className={classes.containerText}>
+                  <Typography type={TypographyTypes.TEXT_2} color={color}>
+                    {textName}
+                  </Typography>
+                  <Typography
+                    className={classes.text}
+                    type={TypographyTypes.H3}
+                    color={color}
+                  >
+                    {textMain}
+                  </Typography>
+                </div>
+                <div className={classes.imgContainer}>
+                  <Image
+                    style={{ height: "auto", width: "100%" }}
+                    className={classnames(classes.img, classes.largeImg)}
+                    src={imageUrl}
+                    alt="janstay"
+                  />
+                  <Image
+                    style={{ height: "auto", width: "100%" }}
+                    className={classnames(classes.img, classes.smallImg)}
+                    src={mobileImageUrl}
+                    alt="janstay"
+                  />
+                </div>
+
+                <Button
+                  rotateRightButton
+                  activeForceHover={isHover}
+                  className={classes.button}
+                  type={ButtonTypes.Light}
+                  rightIcon={<IconArrowRotated />}
+                >
+                  OPEN CASE
+                </Button>
+              </div>
+            </Link>
           )}
         </Hover>
       )}
