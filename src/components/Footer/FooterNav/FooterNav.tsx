@@ -17,7 +17,7 @@ function FooterNav() {
             <div>
               <div className={classes.nav}>
                 <Link href="https://www.behance.net/mqux">Behance</Link>
-                <Link href="https://t.me/mkuzhen">Telegram</Link>
+                <Link href="https://t.me/mqdzn">Telegram</Link>
                 <Link href="https://www.linkedin.com/in/janstay-designer-a45259268/">
                   Linkedin
                 </Link>
@@ -41,7 +41,7 @@ function FooterNav() {
             <div>
               <div className={classes.navMobile}>
                 <Link href="https://www.behance.net/mqux">Behance</Link>
-                <Link href="https://t.me/mkuzhen">Telegram</Link>
+                <Link href="https://t.me/mqdzn">Telegram</Link>
                 <Link href="https://www.linkedin.com/in/janstay-designer-a45259268/">
                   Linkedin
                 </Link>
