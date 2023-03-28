@@ -9,7 +9,7 @@ function HeadApp() {
 
   return (
     <Head>
-      <title>Create Next App</title>
+      <title>{String(t("jansteyName"))}</title>
       <meta name="description" content={String(t("mainText"))} key="desc" />
       <meta property="og:title" content={String(t("jansteyName"))} />
       <meta property="og:description" content={String(t("mainText"))} />
