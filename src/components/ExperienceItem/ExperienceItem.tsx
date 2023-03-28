@@ -13,7 +13,7 @@ import { useTranslation } from "next-i18next";
 interface IProps {
   iconContent: ReactNode;
   title: string;
-  link: string;
+  link?: string;
   withButton?: boolean;
 
   wrapTittleInMobile?: boolean;
