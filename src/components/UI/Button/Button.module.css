@@ -1,4 +1,5 @@
 .button {
+  color: var(--black);
   box-sizing: border-box;
   border-radius: 76px;
   display: flex;
@@ -148,4 +149,8 @@
 
 .fullWidth {
   width: 100%;
+}
+
+.withoutBorder{
+  border: none;
 }

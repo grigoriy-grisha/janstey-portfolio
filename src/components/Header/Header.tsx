@@ -27,9 +27,11 @@ function Header() {
             <Link href="/about">
               <Button type={ButtonTypes.LightBordered}>{t("about")}</Button>
             </Link>
-            <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
-              {t("contact_customer")}
-            </Button>
+            <Link href="https://t.me/mkuzhen" target="_blank">
+              <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
+                {t("contact_customer")}
+              </Button>
+            </Link>
           </div>
         </div>
       }

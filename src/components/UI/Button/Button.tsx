@@ -15,6 +15,7 @@ export enum ButtonTypes {
 type ButtonAttributes = HTMLAttributes<"button">;
 
 interface IProps extends ButtonAttributes {
+  withoutBorder?: boolean;
   children: string;
   type: ButtonTypes;
   leftIcon?: ReactNode;
@@ -34,6 +35,7 @@ function Button({
   fullWidth,
   activeForceHover,
   rotateRightButton,
+  withoutBorder,
   className,
 }: IProps) {
   return (
@@ -43,6 +45,7 @@ function Button({
         classes[type],
         { [classes[`hover-${type}`]]: activeForceHover },
         { [classes.fullWidth]: fullWidth },
+        { [classes.withoutBorder]: withoutBorder },
         className
       )}
     >

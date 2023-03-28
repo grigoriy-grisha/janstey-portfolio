@@ -1,5 +1,6 @@
 import React, { memo, ReactNode } from "react";
 import classnames from "classnames";
+import Link from "next/link";
 
 import { Media } from "@/components/UI/Media";
 import { Typography, TypographyTypes } from "@/components/UI/Typography";
@@ -12,7 +13,7 @@ import { useTranslation } from "next-i18next";
 interface IProps {
   iconContent: ReactNode;
   title: string;
-
+  link: string;
   withButton?: boolean;
 
   wrapTittleInMobile?: boolean;
@@ -23,6 +24,7 @@ function ExperienceItem({
   title,
   withButton,
   wrapTittleInMobile,
+  link,
 }: IProps) {
   const { t } = useTranslation("common");
 
@@ -57,16 +59,33 @@ function ExperienceItem({
                 )}
               </>
             }
-          ></Media>
+          />
 
           {withButton && (
-            <Button className={classes.button} type={ButtonTypes.Transparent}>
-              {t("openPage")}
-            </Button>
+            <>
+              {link ? (
+                <Link href={link} target="_blank">
+                  <Button
+                    className={classes.button}
+                    type={ButtonTypes.Transparent}
+                  >
+                    {t("openPage")}
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  className={classes.button}
+                  type={ButtonTypes.Transparent}
+                >
+                  {t("openPage")}
+                </Button>
+              )}
+            </>
           )}
         </div>
       )}
     </Intersect>
   );
 }
+
 export default memo(ExperienceItem);

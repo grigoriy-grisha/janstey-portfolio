@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 import { IconLogo } from "@/components/UI/Icons/IconLogo";
 import { Button, ButtonTypes } from "@/components/UI/Button";
@@ -8,7 +9,7 @@ import { IconPlus } from "@/components/UI/Icons/IconPlus";
 import { IconLogoSmall } from "@/components/UI/Icons/IconLogoSmall";
 
 import classes from "./FooterHeader.module.css";
-import { useTranslation } from "next-i18next";
+
 function FooterHeader() {
   const { t } = useTranslation("common");
   return (
@@ -25,9 +26,11 @@ function FooterHeader() {
             <Link href="/about">
               <Button type={ButtonTypes.LightBordered}>{t("about")}</Button>
             </Link>
-            <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
-              {t("contact_customer")}
-            </Button>
+            <Link href="https://t.me/mkuzhen" target="_blank">
+              <Button type={ButtonTypes.Dark} leftIcon={<IconPlus />}>
+                {t("contact_customer")}
+              </Button>
+            </Link>
           </div>
         </div>
       }

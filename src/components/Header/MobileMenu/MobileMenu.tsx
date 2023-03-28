@@ -57,13 +57,15 @@ function MobileMenu() {
                   {t("about")}
                 </Button>
               </Link>
-              <Button
-                type={ButtonTypes.Light}
-                leftIcon={<IconPlus />}
-                fullWidth
-              >
-                {t("contact_customer")}
-              </Button>
+              <Link href="https://t.me/mkuzhen" target="_blank">
+                <Button
+                  type={ButtonTypes.Light}
+                  leftIcon={<IconPlus />}
+                  fullWidth
+                >
+                  {t("contact_customer")}
+                </Button>
+              </Link>
               <Link href="https://www.behance.net/mqux" target="_blank">
                 <Button type={ButtonTypes.Light} fullWidth>
                   Behance

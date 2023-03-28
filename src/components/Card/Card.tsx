@@ -72,6 +72,7 @@ function Card({
                 </div>
 
                 <Button
+                  withoutBorder
                   rotateRightButton
                   activeForceHover={isHover}
                   className={classes.button}

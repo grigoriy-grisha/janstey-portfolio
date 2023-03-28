@@ -51,31 +51,37 @@ function ExperienceList() {
           withButton
           iconContent={<IconTelegram />}
           title="Telegram"
+          link="https://t.me/mqdzn"
         />
         <ExperienceItem
           withButton
           iconContent={<IconBehance />}
           title="Behance"
+          link="https://www.behance.net/mqux"
         />
         <ExperienceItem
           withButton
           iconContent={<IconDprofile />}
           title="Dprofile"
+          link="https://www.dprofile.ru/janstay"
         />
         <ExperienceItem
           withButton
           iconContent={<IconDribble />}
           title="Dribble"
+          link="https://www.dribbble.com/janstay"
         />
         <ExperienceItem
           withButton
           iconContent={<IconLinkedin />}
           title="Linkedin"
+          link="https://www.linkedin.com/in/janstay-designer-a45259268/"
         />
         <ExperienceItem
           withButton
           iconContent={<IconYoutube />}
           title="Youtube"
+          link="https://www.youtube.com/channel/UCx5MlzkGNZZWYwbPJrDZ7-Q"
         />
       </div>
       <Spacer heightDesktop="120px" />
