@@ -15,6 +15,7 @@ import { Spacer } from "@/components/UI/Spacer";
 import { HeadApp } from "@/components/HeadApp";
 
 import avaLarge from "src/images/icons/avaLarge.png";
+import { IconAvaRu } from "@/components/UI/Icons/IconAvaRu";
 
 export default function About() {
   const { t } = useTranslation("common");
@@ -26,10 +27,8 @@ export default function About() {
         <Header />
         <Spacer heightDesktop="84px" />
         <Media
-          desktopContent={<Image src={avaLarge} alt="janstey-ava" />}
-          mobileContent={
-            <Image src={avaLarge} width={136} height={136} alt="janstey-ava" />
-          }
+          desktopContent={<IconAvaRu sizeValue="l" />}
+          mobileContent={<IconAvaRu sizeValue="m" />}
         />
 
         <Spacer heightDesktop="44px" />
