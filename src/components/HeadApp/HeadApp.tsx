@@ -9,9 +9,9 @@ function HeadApp() {
 
   return (
     <Head>
-      <title>{String(t("jansteyName"))}</title>
+      <title>{String(t("janstayName"))}</title>
       <meta name="description" content={String(t("mainText"))} key="desc" />
-      <meta property="og:title" content={String(t("jansteyName"))} />
+      <meta property="og:title" content={String(t("janstayName"))} />
       <meta property="og:description" content={String(t("mainText"))} />
       <meta property="og:image" content={OG.src} />
       <link rel="icon" href="/favicon.ico" />

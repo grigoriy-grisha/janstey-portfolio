@@ -11,11 +11,11 @@ function JanstayHello() {
   return (
     <div className={classes.container}>
       <Typography color={theme.colors.gray} type={TypographyTypes.TEXT_1}>
-        {t("jansteyHello")}
+        {t("janstayHello")}
       </Typography>
       <Image className={classes.img} src={ava} alt="janstay-ava" />
       <Typography color={theme.colors.gray} type={TypographyTypes.TEXT_1}>
-        {t("jansteyName")}
+        {t("janstayName")}
       </Typography>
     </div>
   );

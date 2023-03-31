@@ -18,6 +18,7 @@ interface IProps {
   textMain: string;
   imageUrl: string | StaticImageData;
   mobileImageUrl: string | StaticImageData;
+  tabletImageUrl: string | StaticImageData;
   background: ThemeColorValues;
   lightColor?: boolean;
 }
@@ -27,6 +28,7 @@ function Card({
   textMain,
   imageUrl,
   mobileImageUrl,
+  tabletImageUrl,
   lightColor,
   background,
 }: IProps) {
@@ -61,6 +63,12 @@ function Card({
                     style={{ height: "auto", width: "100%" }}
                     className={classnames(classes.img, classes.largeImg)}
                     src={imageUrl}
+                    alt="janstay"
+                  />
+                  <Image
+                    style={{ height: "auto", width: "100%" }}
+                    className={classnames(classes.img, classes.tabletImg)}
+                    src={tabletImageUrl}
                     alt="janstay"
                   />
                   <Image

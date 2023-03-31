@@ -40,6 +40,10 @@
   display: block;
 }
 
+.tabletImg {
+  display: none;
+}
+
 .smallImg {
   display: none;
 }
@@ -55,6 +59,7 @@
 .text {
   margin-top: 14px;
   white-space: pre-wrap;
+  text-shadow: 0 0 2px rgba(0,0,0,0.34);
 }
 
 .button {
@@ -69,6 +74,16 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .tabletImg {
+    display: block;
+  }
+
+  .largeImg {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 552px) {
   .container {
     max-height: 700px;
@@ -79,9 +94,10 @@
     bottom: -60px;
   }
 
-  .largeImg {
+  .tabletImg {
     display: none;
   }
+
 
   .smallImg {
     display: block;
