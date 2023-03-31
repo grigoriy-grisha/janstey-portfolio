@@ -59,7 +59,6 @@
 .text {
   margin-top: 14px;
   white-space: pre-wrap;
-  text-shadow: 0 0 2px rgba(0,0,0,0.34);
 }
 
 .button {
